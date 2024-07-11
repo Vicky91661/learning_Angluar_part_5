@@ -1,0 +1,9 @@
+<div class="profile-pic-selector-popup">
+    <h2>Select Profile Picture</h2>
+    <input type="file" (change)="onFileSelected($event)">
+    <div *ngIf="selectedPicUrl">
+        <img [src]="selectedPicUrl" alt="" class="preview-pic">
+    </div>
+    <button (click)="confirmSelector()">ok</button>
+
+</div>

@@ -1,0 +1,11 @@
+<div class="profile-page">
+    <h1>Profile page</h1>
+    <div class="profile-pic-container">
+        <img class="profile-pic" [src]="profilePicUrl" alt="">
+        <button (click)="openProfilePicSelector()">Change Profile Picture</button>
+    </div>
+    <app-profile-pic-selector
+     (picSelected)="updateProfilePic($event)"
+     *ngIf="isPopupOpen"
+     ></app-profile-pic-selector>
+</div>
